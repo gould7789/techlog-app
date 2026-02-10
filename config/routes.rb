@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  # 우체통을 만듦
+  if Rails.env.development?
+    mount LetterOpenerWeb::Engine, at: "/letter_opener"
+  end
+
   devise_for :users
   root "home#top"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
