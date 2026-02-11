@@ -48,7 +48,8 @@ describe User do
         end
       end
 
-      describe 'nickname存在性の検証' do
+      # nickname속성의 관한 테스트이므로 nickname속성 블록에 코드 추가
+      describe 'nickname存在性の検証' do # :nickname이 존재하는지의 validation
         context "nicknameが空欄の場合" do
           let(:nickname) { '' }
 
