@@ -6,5 +6,8 @@ FactoryBot.define do
     end
     password { '11111111' }
     password_confirmation { '11111111' } # 비밀번호 확인 입력으로 한 번 더 확인
+
+    # 이메일 인증 완료
+    confirmed_at { Time.now }
   end
 end
