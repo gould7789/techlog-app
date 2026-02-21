@@ -23,8 +23,10 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <main class="container mx-auto mt-28 px-5 flex">
+  <body class="h-screen bg-blue-50">
+    <%# shared 폴더의 navbar 파일을 가져옴(언더바 생략 가능) %>
+    <%= render  "shared/navbar" %>
+    <main class="container mx-auto mt-28 px-5 flex items-center justify-center">
       <%= yield %>
     </main>
   </body>
