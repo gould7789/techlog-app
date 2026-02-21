@@ -70,5 +70,9 @@ RSpec.configure do |config|
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
 
+  # factorybot의 메서드를 짧게 적을 수 있게 도와줌
   config.include FactoryBot::Syntax::Methods
+
+  # 시스템 테스트를 할 때 코드를 줄여줌 -> sign_in 헬퍼 메서드 사용 가능
+  config.include Devise::Test::IntegrationHelpers, type: :system
 end
